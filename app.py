@@ -3,7 +3,6 @@ import os
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
 sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-recip_df = pd.DataFrame()
 recip_list = []
 
 def send_out(subject, content_file, recipient_file, sender_email):
